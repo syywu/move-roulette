@@ -14,12 +14,6 @@ class Background extends StatelessWidget {
       height: size.height,
       width: double.infinity,
       child: Stack(alignment: Alignment.center, children: [
-        Positioned(
-          top: 0,
-          left: 0,
-          child: Image.asset('assets/icons/roulette.png'),
-          width: size.width * 0.2,
-        ),
         child,
       ]),
     );
