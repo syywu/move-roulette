@@ -1,8 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/components/background.dart';
-import 'package:flutter_application_1/components/rounded_button.dart';
+import 'package:flutter_application_1/components_welcome/background.dart';
+import 'package:flutter_application_1/components_welcome/rounded_button.dart';
 import 'package:flutter_application_1/constants.dart';
 import 'package:flutter_application_1/screens/login.dart';
 
