@@ -4,7 +4,8 @@ import '../constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String text;
-  final Function press;
+  final VoidCallback press;
+  //VoidCallback is just shorthand for void Function() so you could also define it as final void Function() press;
   final Color color, textColor;
   const RoundedButton({
     Key? key,
@@ -28,7 +29,7 @@ class RoundedButton extends StatelessWidget {
               primary: color,
               onPrimary: textColor,
             ),
-            onPressed: () => press,
+            onPressed: press,
             child: Text(
               text,
             )),
