@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/components_login/already_have_an_account.dart';
 import 'package:flutter_application_1/components_login/rouded_input_field.dart';
-import 'package:flutter_application_1/components_login/text_field_container.dart';
+import 'package:flutter_application_1/components_login/rounded_password_field.dart';
+import 'package:flutter_application_1/components_welcome/rounded_button.dart';
 import 'background.dart';
 
 class Body extends StatelessWidget {
@@ -26,39 +28,20 @@ class Body extends StatelessWidget {
             hintText: 'Your E-mail',
             onChanged: (String value) {},
           ),
-          TextFieldContainer(
-            child: RoundedPasswordField(),
+          SizedBox(height: size.height * 0.02),
+          RoundedPasswordField(
+            onChanged: (value) {},
+          ),
+          SizedBox(height: size.height * 0.02),
+          RoundedButton(
+            text: 'LOGIN',
+            press: () {},
+          ),
+          SizedBox(height: size.height * 0.02),
+          AlreadyHaveAnAccount(
+            press: () {},
           ),
         ],
-      ),
-    );
-  }
-}
-
-class RoundedPasswordField extends StatelessWidget {
-  final ValueChanged<String>? onChanged;
-  const RoundedPasswordField({
-    Key? key,
-    this.onChanged,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      obscureText: true,
-      onChanged: onChanged,
-      cursorColor: Colors.white,
-      decoration: InputDecoration(
-        hintText: 'Password',
-        icon: Icon(
-          Icons.lock,
-          color: Colors.white,
-        ),
-        suffixIcon: Icon(
-          Icons.visibility,
-          color: Colors.black,
-        ),
-        border: InputBorder.none,
       ),
     );
   }
