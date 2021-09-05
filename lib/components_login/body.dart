@@ -3,6 +3,7 @@ import 'package:flutter_application_1/components_login/already_have_an_account.d
 import 'package:flutter_application_1/components_login/rouded_input_field.dart';
 import 'package:flutter_application_1/components_login/rounded_password_field.dart';
 import 'package:flutter_application_1/components_welcome/rounded_button.dart';
+import 'package:flutter_application_1/screens/signup.dart';
 import 'background.dart';
 
 class Body extends StatelessWidget {
@@ -39,7 +40,16 @@ class Body extends StatelessWidget {
           ),
           SizedBox(height: size.height * 0.02),
           AlreadyHaveAnAccount(
-            press: () {},
+            press: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SignUp();
+                  },
+                ),
+              );
+            },
           ),
         ],
       ),
