@@ -3,6 +3,7 @@ import 'package:flutter_application_1/components_login/already_have_an_account.d
 import 'package:flutter_application_1/components_login/rouded_input_field.dart';
 import 'package:flutter_application_1/components_login/rounded_password_field.dart';
 import 'package:flutter_application_1/components_signup/background.dart';
+import 'package:flutter_application_1/components_signup/or_divider.dart';
 import 'package:flutter_application_1/components_welcome/rounded_button.dart';
 import 'package:flutter_application_1/constants.dart';
 import 'package:flutter_application_1/screens/login.dart';
@@ -56,42 +57,24 @@ class Body extends StatelessWidget {
           },
         ),
         OrDivider(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                border: Border.all(width: 2, color: kPrimaryLightColor),
+                shape: BoxShape.circle,
+              ),
+              child: Image.asset(
+                'assets/icons/facebook.png',
+                height: 20,
+                width: 20,
+              ),
+            ),
+          ],
+        ),
       ],
     ));
-  }
-}
-
-class OrDivider extends StatelessWidget {
-  const OrDivider({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: size.height * 0.02),
-      width: size.width * 0.8,
-      child: Row(
-        children: [
-          buildDivider(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: Text(
-              'OR',
-              style:
-                  TextStyle(fontWeight: FontWeight.w600, color: kPrimaryColor),
-            ),
-          ),
-          buildDivider(),
-        ],
-      ),
-    );
-  }
-
-  Expanded buildDivider() {
-    return Expanded(
-      child: Divider(
-        color: Colors.blueGrey,
-      ),
-    );
   }
 }
